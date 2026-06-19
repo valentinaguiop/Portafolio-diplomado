@@ -1,0 +1,6 @@
+{
+  "name": "Portafolio IA Generativa - Valentina Guio",
+  "description": "Portafolio interactivo de proyectos y productos del Diplomado en Inteligencia Artificial Generativa por Valentina Guio Plazas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
