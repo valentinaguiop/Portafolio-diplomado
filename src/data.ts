@@ -1,12 +1,14 @@
 import { Project, Tool, Goal } from './types';
+// @ts-ignore
+import avatarImg from './assets/images/valentina_portrait_exact_1781830541989.jpg';
 
 export const PERSONAL_INFO = {
   name: 'Valentina Guio Plazas',
   title: 'Estudiante del Diplomado en Inteligencia Artificial Generativa',
-  avatarUrl: '/src/assets/images/valentina_portrait_exact_1781830541989.jpg',
+  avatarUrl: avatarImg,
   email: 'valentina.guio_pl@estudiantes.uamerica.edu.co',
-  bio: 'Apasionada por la confluencia entre la computación avanzada y la creatividad humana. Actualmente me encuentro cursando el Diplomado de Inteligencia Artificial Generativa, donde diseño y entreno sistemas interactivos mediante modelos masivos de lenguaje (LLM), flujos de búsqueda enriquecida (RAG) y orquestación de agentes ágiles para solucionar retos complejos del desarrollo moderno.',
-  expectative: 'Aprender a integrar las herramientas más potentes del ecosistema de Inteligencia Artificial Generativa en el desarrollo web moderno, optimizando la experiencia de usuario, automatizando flujos creativos y construyendo una base técnica robusta para orquestar agentes e interfaces inteligentes.',
+  bio: 'Actualmente me encuentro cursando el diplomado de IA generativa. Me apasiona el diseño de interfaces hermosas, la creatividad digital y explorar nuevas tecnologías.',
+  expectative: 'Aprender a integrar las herramientas más potentes de Inteligencia Artificial Generativa en el desarrollo web, optimizando la experiencia de usuario, automatizando flujos creativos y construyendo interfaces interactivas e inteligentes.',
   socialLinks: {
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
@@ -16,95 +18,114 @@ export const PERSONAL_INFO = {
 export const PROJECTS_DATA: Project[] = [
   {
     id: '1',
-    title: 'LegalAI: Analizador Semántico de Contratos',
-    category: 'Procesamiento de Lenguaje (NLP)',
-    shortDescription: 'Plataforma inteligente de lectura contractual que detecta cláusulas de riesgo, obligaciones financieras y resúmenes estructurados usando RAG.',
-    longDescription: 'LegalAI es un sistema completo diseñado para agilizar el análisis jurídico contractual. Utiliza el modelo Gemini 2.5 Flash para realizar un análisis sintáctico-semántico profundo sobre documentos PDF complejos. El sistema automatiza la extracción de términos críticos de confidencialidad, penalidades económicas, renovaciones automáticas e inconsistencias legales, mapeando en segundos lo que a un abogado le tomaría horas. Emplea Embeddings para indexar la información y permitir realizar preguntas contextuales en lenguaje natural directamente sobre el contrato.',
-    coverImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800&h=450',
-    technologies: ['Gemini 2.5 Flash', 'LangChain', 'Embeddings', 'React', 'Tailwind CSS'],
+    title: 'Proyecto de Módulo 1',
+    category: 'Módulo 1',
+    shortDescription: 'Espacio reservado para el entregable del Módulo 1. Aquí se presentará el proyecto correspondiente a los temas abordados.',
+    longDescription: 'Este es el espacio asignado para documentar y presentar el proyecto final del Módulo 1. En esta sección se detallarán los objetivos del proyecto, la metodología implementada, los resultados obtenidos y la demostración práctica interactiva.',
+    coverImage: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800&h=450',
+    technologies: ['IA Generativa', 'Prompting', 'Herramientas de IA'],
     keyFeatures: [
-      'Subida de documentos PDF interactiva con drag-and-drop',
-      'Extracción automática de cláusulas redactadas de forma ambigua o riesgosa',
-      'Chat interactivo para interrogar al contrato con referencias exactas',
-      'Generación instantánea de resúmenes estructurados listos para ser exportados'
+      'Visualización interactiva y dinámica del proyecto',
+      'Estructura adaptativa de la solución implementada',
+      'Interfaz de usuario intuitiva y de alta fidelidad',
+      'Integración con componentes reactivos en tiempo real'
     ],
-    diplomaModule: 'Módulo 2: Modelos de Lenguaje Avanzados y Fundamentos RAG',
-    difficulty: 'Intermedio',
+    diplomaModule: 'Módulo 1: Introducción a las herramientas de IA generativa',
+    difficulty: 'Principiante',
     githubUrl: 'https://github.com',
     demoUrl: '#'
   },
   {
     id: '2',
-    title: 'PromoGen: Suite Multimodal Publicitaria',
-    category: 'Generación Multimodal (Difusión)',
-    shortDescription: 'Generador de campañas digitales que crea copys persuasivos optimizados para SEO y banners visuales fotorrealistas de alta gama.',
-    longDescription: 'PromoGen optimiza y automatiza la línea de producción publicitaria digital. Se encarga de conceptualizar y renderizar las variaciones visuales y de texto basadas en los atributos esenciales e identidad sonora de una marca. Por un lado, utiliza modelos de difusión avanzada para fabricar composiciones visuales hiper-segmentadas y realistas, y por el otro, se apoya en modelos autorregresivos para generar textos persuasivos dirigidos a diferentes nichos, reduciendo exponencialmente los tiempos de iteración gráfica y planificación de pauta en redes.',
-    coverImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=450',
-    technologies: ['Stable Diffusion XL', 'Gemini Pro Vision', 'DALL-E 3', 'Vite', 'CSS Grid'],
+    title: 'Proyecto de Módulo 2',
+    category: 'Módulo 2',
+    shortDescription: 'Espacio reservado para el entregable del Módulo 2. Aquí se presentará el proyecto correspondiente a los temas abordados.',
+    longDescription: 'Este es el espacio asignado para documentar y presentar el proyecto final del Módulo 2. En esta sección se detallarán los objetivos del proyecto, la metodología implementada, los resultados obtenidos y la demostración práctica interactiva.',
+    coverImage: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800&h=450',
+    technologies: ['Diseño de Producto', 'Interfaces de IA', 'Figma', 'UX/UI'],
     keyFeatures: [
-      'Generador interactivo de imágenes publicitarias con control de luz, estilo y encuadre',
-      'Asistente de Copywriting con de tono personalizable (Directo, Divertido, Sofisticado o Institucional)',
-      'Optimización inteligente de prompts visuales mediante sugerencias automáticas de IA',
-      'Área de previsualización adaptada para formatos de Instagram, TikTok y LinkedIn'
+      'Visualización interactiva y dinámica del proyecto',
+      'Estructura adaptativa de la solución implementada',
+      'Interfaz de usuario intuitiva y de alta fidelidad',
+      'Integración con componentes reactivos en tiempo real'
     ],
-    diplomaModule: 'Módulo 3: Creación de Contenido Multimodal y Modelos de Difusión',
+    diplomaModule: 'Módulo 2: Diseño de productos digitales con IA',
     difficulty: 'Intermedio',
     githubUrl: 'https://github.com',
     demoUrl: '#'
   },
   {
     id: '3',
-    title: 'AgentDesk: Orquestador Autónomo de Compras',
-    category: 'Agentes & Razonamiento',
-    shortDescription: 'Red de agentes cooperativos que simulan la búsqueda, comparación de especificaciones técnicas y redacción de propuestas de compra.',
-    longDescription: 'AgentDesk es un sistema robusto de automatización empresarial basado en arquitecturas multi-agente donde cada agente desempeña un rol único. El "Investigador" busca y recopila precios de productos en catálogos simulados; el "Analista" organiza las especificaciones de rendimiento y costos en una matriz comparativa profunda; y el "Redactor" compila un informe final justificado. Los agentes conversan entre sí y autoevalúan su progreso antes de entregar el diagnóstico de adquisición sugerido al usuario.',
-    coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=450',
-    technologies: ['LangGraph', 'CrewAI', 'Gemini Structured JSON', 'Python Async', 'Express'],
+    title: 'Proyecto de Módulo 3',
+    category: 'Módulo 3',
+    shortDescription: 'Espacio reservado para el entregable del Módulo 3. Aquí se presentará el proyecto correspondiente a los temas abordados.',
+    longDescription: 'Este es el espacio asignado para documentar y presentar el proyecto final del Módulo 3. En esta sección se detallarán los objetivos del proyecto, la metodología implementada, los resultados obtenidos y la demostración práctica interactiva.',
+    coverImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=450',
+    technologies: ['Desarrollo Asistido', 'Vite', 'React', 'Tailwind CSS'],
     keyFeatures: [
-      'Visualizador dinámico basado en grafos interactivos que muestra la línea de pensamiento de los agentes',
-      'Bucle de retroalimentación donde el usuario puede aprobar o redirigir las decisiones intermedias del flujo',
-      'Comparador inteligente capaz de ponderar precio vs. calidad garantizada',
-      'Consolidación automática y descarga del informe final enriquecido en Markdown'
+      'Visualización interactiva y dinámica del proyecto',
+      'Estructura adaptativa de la solución implementada',
+      'Interfaz de usuario intuitiva y de alta fidelidad',
+      'Integración con componentes reactivos en tiempo real'
     ],
-    diplomaModule: 'Módulo 4: Agentes Cognitivos, Herramientas y Razonamiento Avanzado',
-    difficulty: 'Avanzado',
+    diplomaModule: 'Módulo 3: Construye aplicaciones con desarrollo asistido por IA',
+    difficulty: 'Intermedio',
     githubUrl: 'https://github.com',
     demoUrl: '#'
   },
   {
     id: '4',
-    title: 'SocratesCode: Tutor Interactivo de Código',
-    category: 'Productividad & Web',
-    shortDescription: 'Asistente de programación adaptativo que emplea diálogo socrático para guiar a los estudiantes hacia la resolución de errores.',
-    longDescription: 'En lugar de simplemente proveer soluciones rápidas de copiar y pegar, SocratesCode es un asistente educativo diseñado con técnicas específicas de prompting para promover el autoaprendizaje. Cuando el estudiante comparte un fragmento de código defectuoso, la IA analiza la sintaxis, identifica las debilidades metodológicas y ofrece pistas secuenciales guiadas. Esto fomenta el razonamiento lógico, ayuda a consolidar las mejores prácticas de codificación limpia y evalúa de forma dinámica el estilo del programador.',
-    coverImage: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800&h=450',
-    technologies: ['Gemini 2.5 Flash', 'System Instructions', 'Few-Shot Learning', 'Monaco Editor'],
+    title: 'Proyecto de Módulo 4',
+    category: 'Módulo 4',
+    shortDescription: 'Espacio reservado para el entregable del Módulo 4. Aquí se presentará el proyecto correspondiente a los temas abordados.',
+    longDescription: 'Este es el espacio asignado para documentar y presentar el proyecto final del Módulo 4. En esta sección se detallarán los objetivos del proyecto, la metodología implementada, los resultados obtenidos y la demostración práctica interactiva.',
+    coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=450',
+    technologies: ['Control de Versiones', 'Despliegues', 'Servidores API', 'Cloud'],
     keyFeatures: [
-      'Editor de código integrado con resaltado de sintaxis sintáctica',
-      'Retroalimentación interactiva basada en el método socrático (preguntas y pistas dirigidas)',
-      'Identificación automática de vulnerabilidades y problemas de rendimiento en el código escrito',
-      'Generación dinámica de retos de programación adaptados al nivel del usuario'
+      'Visualización interactiva y dinámica del proyecto',
+      'Estructura adaptativa de la solución implementada',
+      'Interfaz de usuario intuitiva y de alta fidelidad',
+      'Integración con componentes reactivos en tiempo real'
     ],
-    diplomaModule: 'Módulo 1: Fundamentos de IA Generativa y Técnicas de Prompting',
-    difficulty: 'Principiante',
+    diplomaModule: 'Módulo 4: Versiona, despliega y conecta tu aplicación',
+    difficulty: 'Avanzado',
     githubUrl: 'https://github.com',
     demoUrl: '#'
   },
   {
     id: '5',
-    title: 'VoiceSense: Analizador Emocional de Voz del Cliente',
-    category: 'Procesamiento de Lenguaje (NLP)',
-    shortDescription: 'Software analítico multicanal que procesa audio de soporte técnico, evalúa el estado de ánimo e identifica intenciones latentes de abandono.',
-    longDescription: 'VoiceSense actúa como el oído estratégico para los equipos de éxito de cliente. Mediante la API Whisper procesa notas de voz y grabaciones de llamadas de soporte para transcribir el discurso verbal. Prontamente, Gemini analiza el contexto interpretando expresiones sutiles y entonación latente sugerida en la transcripción, catalogando el sentimiento general en tiempo real (Satisfecho, Frustrado, Molesto o Neutro). Al finalizar, genera estrategias de contención accionables para los agentes de atención para los casos en los que se prevea abandono inminente.',
+    title: 'Proyecto de Módulo 5',
+    category: 'Módulo 5',
+    shortDescription: 'Espacio reservado para el entregable del Módulo 5. Aquí se presentará el proyecto correspondiente a los temas abordados.',
+    longDescription: 'Este es el espacio asignado para documentar y presentar el proyecto final del Módulo 5. En esta sección se detallarán los objetivos del proyecto, la metodología implementada, los resultados obtenidos y la demostración práctica interactiva.',
     coverImage: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800&h=450',
-    technologies: ['Whisper API', 'Gemini Structured Parsing', 'Recharts', 'React Custom Charts', 'Node.js'],
+    technologies: ['Análisis de Datos', 'Machine Learning', 'Visualización', 'IA'],
     keyFeatures: [
-      'Carga instantánea de notas de voz de soporte y transcripción automática en múltiples idiomas',
-      'Dashboard estadístico interactivo con gráficos comparativos sobre la urgencia y enojo del usuario',
-      'Generación automatizada de plantillas de correo electrónico y de chat para mitigar fricciones',
-      'Predicción paramétrica sobre posibles motivos latentes de no renovación del servicio'
+      'Visualización interactiva y dinámica del proyecto',
+      'Estructura adaptativa de la solución implementada',
+      'Interfaz de usuario intuitiva y de alta fidelidad',
+      'Integración con componentes reactivos en tiempo real'
     ],
-    diplomaModule: 'Módulo 5: Integración Empresarial, APIs y Despliegue de Productos de IA',
+    diplomaModule: 'Módulo 5: Análisis de datos y ML con IA generativa',
+    difficulty: 'Avanzado',
+    githubUrl: 'https://github.com',
+    demoUrl: '#'
+  },
+  {
+    id: '6',
+    title: 'Proyecto de Módulo 6',
+    category: 'Módulo 6',
+    shortDescription: 'Espacio reservado para el entregable del Módulo 6. Aquí se presentará el proyecto correspondiente a los temas abordados.',
+    longDescription: 'Este es el espacio asignado para documentar y presentar el proyecto final del Módulo 6. En esta sección se detallarán los objetivos del proyecto, la metodología implementada, los resultados obtenidos y la demostración práctica interactiva.',
+    coverImage: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800&h=450',
+    technologies: ['Automatización', 'Agentes Autónomos', 'MCP', 'Orquestación'],
+    keyFeatures: [
+      'Visualización interactiva y dinámica del proyecto',
+      'Estructura adaptativa de la solución implementada',
+      'Interfaz de usuario intuitiva y de alta fidelidad',
+      'Integración con componentes reactivos en tiempo real'
+    ],
+    diplomaModule: 'Módulo 6: Automatización nativa con IA, agentes y MCP',
     difficulty: 'Avanzado',
     githubUrl: 'https://github.com',
     demoUrl: '#'
@@ -113,46 +134,116 @@ export const PROJECTS_DATA: Project[] = [
 
 export const TOOLS_DATA: Tool[] = [
   {
-    name: 'Gemini 2.5 API',
-    category: 'Modelos',
-    iconName: 'Sparkles',
-    description: 'Uso avanzado de la API para modelado multimodal, llamadas de funciones y ventana de contexto de 2 millones de tokens.',
-    percentageLearned: 95
+    name: 'Make',
+    category: 'Automatización',
+    iconName: 'make',
+    description: 'Creación y orquestación de flujos de trabajo automatizados para conectar aplicaciones y servicios sin necesidad de programar.',
+    percentageLearned: 90,
+    url: 'https://www.make.com'
   },
   {
-    name: 'Prompt Engineering',
-    category: 'Prompting',
-    iconName: 'MessageSquareText',
-    description: 'Técnicas avanzadas: Chain of Thought, Socratic, Few-Shot, ReAct, System Instructions y validación de salidas estructuradas.',
-    percentageLearned: 100
+    name: 'Tally',
+    category: 'Formularios',
+    iconName: 'tally',
+    description: 'Diseño de formularios elegantes y dinámicos para recopilar datos, integrados perfectamente con flujos de trabajo automatizados.',
+    percentageLearned: 95,
+    url: 'https://tally.so'
   },
   {
-    name: 'LangChain & LangGraph',
-    category: 'Frameworks',
-    iconName: 'Network',
-    description: 'Orquestación de pipelines RAG avanzados de recuperación y flujos complejos de agentes cíclicos autónomos.',
-    percentageLearned: 85
+    name: 'Gemini',
+    category: 'Modelos de IA',
+    iconName: 'gemini',
+    description: 'Aprovechamiento de los modelos de Google para generación de contenido multimodal, análisis conversacional y prompts avanzados.',
+    percentageLearned: 95,
+    url: 'https://gemini.google.com'
   },
   {
-    name: 'Bases de Datos Vectoriales',
-    category: 'Frameworks',
-    iconName: 'Database',
-    description: 'Generación de vectores de embeddings, almacenamiento semántico e indexación inteligente (ChromaDB, Pinecone).',
-    percentageLearned: 90
+    name: 'Opal',
+    category: 'Documentación',
+    iconName: 'opal',
+    description: 'Grabación y estructuración de demostraciones interactivas para ilustrar el funcionamiento de herramientas y proyectos digitales.',
+    percentageLearned: 85,
+    url: 'https://www.opal.so'
   },
   {
-    name: 'Modelos de Difusión',
-    category: 'Modelos',
-    iconName: 'Image',
-    description: 'Prompting visual de alta fidelidad, inpainting, outpainting y consistencia estilística (Stable Diffusion XL, DALL-E 3).',
-    percentageLearned: 80
+    name: 'Google AI',
+    category: 'Plataforma de IA',
+    iconName: 'google-ai',
+    description: 'Exploración de la plataforma de Google para prototipado rápido, experimentación con LLMs y desarrollo de soluciones de IA.',
+    percentageLearned: 92,
+    url: 'https://ai.google'
   },
   {
-    name: 'Despliegue & API Router',
+    name: 'Netlify',
     category: 'Despliegues',
-    iconName: 'Globe',
-    description: 'Puenteo de llaves API en servidores seguros Node/Express, flujos CORS controlados y estructuración React SPA.',
-    percentageLearned: 88
+    iconName: 'netlify',
+    description: 'Despliegue continuo y hosting ágil de aplicaciones web modernas, conectando directamente con repositorios de código.',
+    percentageLearned: 90,
+    url: 'https://www.netlify.com'
+  },
+  {
+    name: 'ChatGPT',
+    category: 'Modelos de IA',
+    iconName: 'chatgpt',
+    description: 'Interacción y optimización de prompts sobre modelos avanzados de OpenAI para ideación, asistencia de código y redacción creativa.',
+    percentageLearned: 95,
+    url: 'https://chatgpt.com'
+  },
+  {
+    name: 'Claude',
+    category: 'Modelos de IA',
+    iconName: 'claude',
+    description: 'Asistencia avanzada en tareas de razonamiento profundo, programación compleja y redacción utilizando la familia de modelos Claude de Anthropic.',
+    percentageLearned: 90,
+    url: 'https://claude.ai'
+  },
+  {
+    name: 'Tokenizer',
+    category: 'Procesamiento NLP',
+    iconName: 'tokenizer',
+    description: 'Comprensión y análisis de cómo los modelos de lenguaje dividen y procesan el texto en unidades de tokens para optimizar costos y eficiencia.',
+    percentageLearned: 88,
+    url: 'https://platform.openai.com/tokenizer'
+  },
+  {
+    name: 'Google Colab',
+    category: 'Entornos de Código',
+    iconName: 'colab',
+    description: 'Ejecución y documentación interactiva de libretas de Python en la nube para análisis de datos, Machine Learning y prototipado rápido.',
+    percentageLearned: 85,
+    url: 'https://colab.research.google.com'
+  },
+  {
+    name: 'VS Code',
+    category: 'Entornos de Código',
+    iconName: 'vscode',
+    description: 'Entorno de desarrollo integrado altamente personalizado para programar, depurar y estructurar aplicaciones web con soporte nativo de IA.',
+    percentageLearned: 95,
+    url: 'https://code.visualstudio.com'
+  },
+  {
+    name: 'Open Code',
+    category: 'Código Abierto',
+    iconName: 'opencode',
+    description: 'Adopción de estándares de código abierto y plataformas colaborativas para potenciar el desarrollo transparente y de alta seguridad.',
+    percentageLearned: 90,
+    url: 'https://github.com'
+  },
+  {
+    name: 'Node.js',
+    category: 'Entornos de Runtime',
+    iconName: 'nodejs',
+    description: 'Entorno de ejecución de JavaScript del lado del servidor que sustenta el desarrollo de APIs robustas y tooling moderno de frontend.',
+    percentageLearned: 85,
+    url: 'https://nodejs.org'
+  },
+  {
+    name: 'NPM',
+    category: 'Gestión de Paquetes',
+    iconName: 'npm',
+    description: 'Gestión, instalación y distribución de dependencias de software fundamentales para orquestar y desplegar soluciones web completas.',
+    percentageLearned: 90,
+    url: 'https://www.npmjs.com'
   }
 ];
 

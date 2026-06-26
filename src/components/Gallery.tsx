@@ -14,7 +14,7 @@ export default function Gallery({ onSelectProject }: GalleryProps) {
   const [searchQuery, setSearchQuery] = useState('');
 
   // 1. Get unique categories
-  const categories: string[] = ['Todos', 'Procesamiento de Lenguaje (NLP)', 'Generación Multimodal (Difusión)', 'Agentes & Razonamiento', 'Productividad & Web'];
+  const categories: string[] = ['Todos', 'Módulo 1', 'Módulo 2', 'Módulo 3', 'Módulo 4', 'Módulo 5', 'Módulo 6'];
 
   // 2. Filter projects
   const filteredProjects = PROJECTS_DATA.filter((project) => {

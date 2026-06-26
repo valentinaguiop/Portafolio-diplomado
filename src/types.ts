@@ -14,17 +14,20 @@ export interface Project {
 }
 
 export type ProjectCategory = 
-  | 'Procesamiento de Lenguaje (NLP)'
-  | 'Generación Multimodal (Difusión)'
-  | 'Agentes & Razonamiento'
-  | 'Productividad & Web';
+  | 'Módulo 1'
+  | 'Módulo 2'
+  | 'Módulo 3'
+  | 'Módulo 4'
+  | 'Módulo 5'
+  | 'Módulo 6';
 
 export interface Tool {
   name: string;
-  category: 'Frameworks' | 'Modelos' | 'Despliegues' | 'Prompting';
+  category: string;
   iconName: string; // Used to resolve to Lucide icons dynamically
   description: string;
   percentageLearned: number; // For clean visual meters
+  url?: string; // Redirect link to official site
 }
 
 export interface Goal {

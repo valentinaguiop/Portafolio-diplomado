@@ -41,13 +41,14 @@ export default function App() {
 
   const menuItems = [
     { name: 'Presentación', href: '#presentacion' },
+    { name: 'Expectativas', href: '#expectativas' },
     { name: 'Proyectos', href: '#proyectos' },
     { name: 'Herramientas', href: '#herramientas' },
     { name: 'Metas', href: '#metas' }
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 relative flex flex-col font-sans select-none selection:bg-brand selection:text-slate-950">
+    <div className="min-h-screen bg-[#FF9CD0] relative flex flex-col font-sans select-none selection:bg-brand selection:text-slate-950">
       {/* Light glow effects with green and pink blending */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-pink/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-80 h-80 bg-brand/10 rounded-full blur-[100px] pointer-events-none" />
@@ -219,9 +220,6 @@ export default function App() {
 
                 {/* University micro identity */}
                 <div className="space-y-1">
-                  <span className="text-[10px] text-slate-400 font-mono tracking-widest uppercase block">
-                    VALENTINA GUIO PLAZAS
-                  </span>
                   <div className="inline-flex items-center gap-1.5 bg-slate-100/80 border border-slate-200/50 px-3 py-1 rounded-full text-[11px] text-slate-700 font-bold">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-pink animate-pulse" />
                     <span>Universidad de América</span>
@@ -229,76 +227,55 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Right Column: Information, expectations and CTAs */}
+              {/* Right Column: Information and CTAs */}
               <div className="md:col-span-8 space-y-6">
                 
                 {/* Headers & Title */}
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1 bg-brand-muted border border-brand/35 text-brand-dark px-3 py-0.5 text-[11px] font-bold rounded-lg tracking-wide uppercase">
-                      <Sparkle size={10} className="fill-brand text-brand-dark" /> Portafolio IA 2026
-                    </span>
-                    <span className="inline-flex items-center gap-1 bg-brand-pink-muted border border-brand-pink/35 text-brand-pink-dark px-3 py-0.5 text-[11px] font-bold rounded-lg tracking-wide uppercase">
-                      <Sparkles size={10} className="text-brand-pink-dark animate-pulse" /> Toque Femenino
+                    <span className="inline-flex items-center gap-1 bg-brand-muted border border-brand/35 text-brand-dark px-3 py-0.5 text-[11px] font-bold rounded-lg tracking-wide uppercase font-mono">
+                      <Sparkle size={10} className="fill-brand text-brand-dark" /> Portafolio 2026
                     </span>
                   </div>
 
-                  <h1 className="text-3xl sm:text-4xl font-display font-medium tracking-tight text-slate-900 leading-tight">
+                  <h1 className="text-4xl sm:text-5xl font-cool italic font-bold tracking-wide text-slate-900 leading-tight">
                     {PERSONAL_INFO.name}
                   </h1>
                   
-                  <p className="text-brand-dark font-display font-semibold text-sm sm:text-base tracking-wide flex items-center gap-1.5">
+                  <p className="text-brand-dark font-display font-bold text-sm sm:text-base tracking-wide flex items-center gap-1.5">
                     <GraduationCap size={16} className="text-brand-pink-dark" />
                     Estudiante del Diplomado en Inteligencia Artificial Generativa
                   </p>
                 </div>
 
                 {/* Bio */}
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-sans">
+                <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-sans font-medium">
                   {PERSONAL_INFO.bio}
                 </p>
 
-                {/* Expectations Block inside the Profile card */}
-                <div className="bg-white/40 border-l-4 border-brand-pink/60 border border-slate-200/30 p-4 rounded-xl space-y-2 relative shadow-sm">
-                  <div className="absolute top-2 right-3 text-slate-200 pointer-events-none">
-                    <BrainCircuit size={48} className="stroke-[1]" />
-                  </div>
-                  <h3 className="text-xs font-mono font-bold text-slate-400 tracking-wider uppercase flex items-center gap-1">
-                    <Lightbulb size={12} className="text-brand" /> Mis Expectativas del Diplomado
-                  </h3>
-                  <blockquote className="text-slate-700 text-xs sm:text-sm leading-relaxed italic pr-4">
-                    "{PERSONAL_INFO.expectative}"
-                  </blockquote>
-                  
-                  <div className="flex flex-wrap gap-2 pt-1 text-[10px] text-slate-500 font-medium">
-                    <span className="bg-white/80 border border-slate-100 px-2 py-0.5 rounded-md">🌱 Integración Frontend Interactiva</span>
-                    <span className="bg-white/80 border border-slate-100 px-2 py-0.5 rounded-md">🤖 Orquestación de Agentes</span>
-                  </div>
-                </div>
-
                 {/* Call to action buttons */}
-                <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-100">
+                <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100">
                   <div className="flex flex-wrap items-center gap-2.5">
                     <a
                       href="#proyectos"
-                      className="bg-gradient-to-r from-brand-dark to-brand hover:from-brand hover:to-brand-pink-medium text-slate-950 font-bold text-xs px-5 py-2.5 rounded-xl transition duration-300 shadow-sm inline-flex items-center gap-1.5 hover:scale-[1.02] active:scale-95"
+                      className="bg-brand hover:bg-brand-medium text-slate-950 font-bold text-xs px-5 py-2.5 rounded-xl transition duration-300 shadow-sm inline-flex items-center gap-1.5 hover:scale-[1.02] active:scale-95 cursor-pointer"
                     >
                       Explorar Proyectos <ArrowRight size={13} />
                     </a>
                     <a
-                      href="#metas"
-                      className="bg-white/80 border border-slate-300 hover:border-brand-pink/50 hover:text-brand-pink-dark text-slate-700 font-bold text-xs px-5 py-2.5 rounded-xl transition duration-200 shadow-sm inline-flex items-center gap-1.5 hover:bg-brand-pink-muted/10"
+                      href="#expectativas"
+                      className="bg-white/80 border border-slate-300 hover:border-brand-pink/50 hover:text-brand-pink-dark text-slate-700 font-bold text-xs px-5 py-2.5 rounded-xl transition duration-200 shadow-sm inline-flex items-center gap-1.5 hover:bg-brand-pink-muted/10 cursor-pointer"
                     >
-                      Ver Metas
+                      Ver Expectativas
                     </a>
                   </div>
 
-                  {/* Micro contact action */}
-                  <div className="flex items-center gap-2 overflow-hidden text-[10px]">
-                    <span className="truncate text-slate-400 font-mono bg-slate-100/50 px-2 py-1 rounded border border-slate-200/30">{PERSONAL_INFO.email}</span>
+                  {/* Contact details */}
+                  <div className="flex items-center gap-2 overflow-hidden text-[11px]">
+                    <span className="truncate text-slate-600 font-mono bg-white/50 px-2 py-1 rounded border border-slate-200/50">{PERSONAL_INFO.email}</span>
                     <button
                       onClick={handleCopyEmail}
-                      className="text-[10px] text-brand-pink-dark hover:text-brand-pink-medium font-bold shrink-0 underline cursor-pointer"
+                      className="text-[11px] text-brand-pink-dark hover:text-brand-pink-medium font-bold shrink-0 underline cursor-pointer"
                     >
                       {copiedEmail ? 'Copiado' : 'Copiar'}
                     </button>
@@ -307,6 +284,31 @@ export default function App() {
 
               </div>
               
+            </div>
+          </GlassCard>
+        </section>
+
+        {/* 2. SECCIÓN EXPECTATIVAS (DEDICADA Y ESPACIADA) */}
+        <section id="expectativas" className="scroll-mt-24">
+          <GlassCard className="bg-white/85 border border-slate-200/60 p-6 md:p-8 rounded-[28px] relative overflow-hidden" delay={0.1}>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand/10 rounded-full blur-2xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-brand-pink/10 rounded-full blur-2xl pointer-events-none" />
+            
+            <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
+              <div className="bg-brand/20 p-3.5 rounded-2xl border border-brand/35 shrink-0">
+                <BrainCircuit size={26} className="text-brand-dark animate-pulse" />
+              </div>
+              <div className="space-y-2 flex-1">
+                <span className="text-[10px] text-brand-dark font-bold font-mono tracking-widest uppercase">
+                  METAS DE APRENDIZAJE
+                </span>
+                <h2 className="text-xl md:text-2xl font-display font-bold text-slate-900 tracking-tight">
+                  Mis Expectativas del Diplomado
+                </h2>
+                <p className="text-slate-700 text-sm sm:text-base leading-relaxed font-sans italic">
+                  "{PERSONAL_INFO.expectative}"
+                </p>
+              </div>
             </div>
           </GlassCard>
         </section>
@@ -363,6 +365,17 @@ export default function App() {
                         <span className="text-[10px] text-slate-400 font-semibold">{tool.category}</span>
                       </div>
                     </div>
+                    {tool.url && (
+                      <a 
+                        href={tool.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-400 hover:text-brand-dark p-1.5 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-100 transition duration-200 cursor-pointer inline-flex items-center"
+                        title={`Visitar sitio de ${tool.name}`}
+                      >
+                        <DynamicIcon name="ExternalLink" size={14} />
+                      </a>
+                    )}
                   </div>
 
                   <p className="text-slate-500 text-xs leading-relaxed min-h-[40px]">
@@ -393,65 +406,19 @@ export default function App() {
 
         {/* 5. SECCIÓN METAS LOGRADAS */}
         <section id="metas" className="scroll-mt-24 space-y-8">
-          <div className="text-center md:text-left max-w-xl">
-            <span className="text-[10px] text-brand-dark font-bold font-mono tracking-widest uppercase block mb-1">
-              LOGROS & HITOS
-            </span>
-            <h2 className="text-2xl md:text-3.5xl font-display font-medium text-slate-900 tracking-tight">
-              Metas Logradas en el Diplomado
-            </h2>
-            <p className="text-slate-500 text-xs md:text-sm mt-1.5">
-              Progreso sistemático de competencias teóricas y entregas de software acreditadas por la dirección académica.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {GOALS_DATA.map((goal, idx) => (
-              <GlassCard 
-                key={goal.id} 
-                className={`bg-white hover:border-slate-300 relative ${
-                  goal.completed ? 'border-brand/10' : 'border-amber-200/20'
-                }`}
-                delay={idx * 0.1}
-              >
-                <div className="flex items-start gap-3.5">
-                  {/* Complete checkmark circle */}
-                  <div className="mt-0.5 shrink-0">
-                    {goal.completed ? (
-                      <span className="h-6 w-6 rounded-full bg-brand/15 text-brand-dark border border-brand/25 flex items-center justify-center">
-                        <Check size={12} className="stroke-[3]" />
-                      </span>
-                    ) : (
-                      <span className="h-6 w-6 rounded-full bg-amber-500/10 text-amber-600 border border-amber-500/20 flex items-center justify-center text-[10px] font-bold">
-                        ⏱️
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="space-y-1.5 flex-1">
-                    <div className="flex items-center justify-between gap-1.5">
-                      <span className="text-[9px] text-slate-400 font-mono tracking-widest uppercase">
-                        {goal.category}
-                      </span>
-                      <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
-                        goal.completed ? 'bg-brand-muted text-brand-dark' : 'bg-amber-50 text-amber-700'
-                      }`}>
-                        {goal.dateCompleted}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xs md:text-sm font-display font-bold text-slate-900 tracking-tight leading-snug">
-                      {goal.title}
-                    </h3>
-                    
-                    <p className="text-slate-500 text-xs leading-relaxed">
-                      {goal.description}
-                    </p>
-                  </div>
-                </div>
-              </GlassCard>
-            ))}
-          </div>
+          <GlassCard className="bg-white/80 border border-slate-200/50 p-6 md:p-8 rounded-[28px]">
+            <div className="text-center md:text-left max-w-xl">
+              <span className="text-[10px] text-brand-dark font-bold font-mono tracking-widest uppercase block mb-1">
+                LOGROS & HITOS
+              </span>
+              <h2 className="text-2xl md:text-3.5xl font-display font-medium text-slate-900 tracking-tight">
+                Metas Logradas en el Diplomado
+              </h2>
+              <p className="text-slate-500 text-xs md:text-sm mt-1.5 leading-relaxed">
+                Progreso sistemático de competencias teóricas y entregas de software acreditadas por la dirección académica. Esta sección se irá completando a medida que avance el programa académico del diplomado.
+              </p>
+            </div>
+          </GlassCard>
         </section>
 
       </main>
