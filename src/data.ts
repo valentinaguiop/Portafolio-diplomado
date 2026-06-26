@@ -12,7 +12,9 @@ export const PERSONAL_INFO = {
   socialLinks: {
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
-  }
+    whatsapp: 'https://wa.me/573144006718',
+  },
+  phone: '+57 3144006718'
 };
 
 export const PROJECTS_DATA: Project[] = [

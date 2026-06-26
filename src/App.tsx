@@ -18,7 +18,8 @@ import {
   Menu,
   ChevronRight,
   ArrowRight,
-  Sparkle
+  Sparkle,
+  MessageCircle
 } from 'lucide-react';
 import { PERSONAL_INFO, TOOLS_DATA, GOALS_DATA } from './data';
 import { Project } from './types';
@@ -111,6 +112,16 @@ export default function App() {
             >
               <Github size={16} />
             </a>
+            <a
+              href={PERSONAL_INFO.socialLinks.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="p-2 text-slate-500 hover:text-emerald-600 hover:bg-emerald-50 rounded-xl transition duration-200"
+              aria-label="WhatsApp Chat"
+              title="Chat con WhatsApp"
+            >
+              <MessageCircle size={16} />
+            </a>
             <button
               onClick={handleCopyEmail}
               className="bg-slate-900 border border-slate-800 text-white hover:bg-slate-800 hover:border-slate-700 font-bold text-xs px-4 py-2 rounded-xl transition duration-200 cursor-pointer shadow-sm"
@@ -157,6 +168,16 @@ export default function App() {
                     {item.name}
                   </a>
                 ))}
+                <a
+                  href={PERSONAL_INFO.socialLinks.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="py-2.5 text-sm font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-2 border-t border-slate-100 mt-2 pt-2"
+                >
+                  <MessageCircle size={16} />
+                  Chat en WhatsApp ({PERSONAL_INFO.phone})
+                </a>
               </div>
             </motion.div>
           )}
@@ -271,14 +292,26 @@ export default function App() {
                   </div>
 
                   {/* Contact details */}
-                  <div className="flex items-center gap-2 overflow-hidden text-[11px]">
-                    <span className="truncate text-slate-600 font-mono bg-white/50 px-2 py-1 rounded border border-slate-200/50">{PERSONAL_INFO.email}</span>
-                    <button
-                      onClick={handleCopyEmail}
-                      className="text-[11px] text-brand-pink-dark hover:text-brand-pink-medium font-bold shrink-0 underline cursor-pointer"
+                  <div className="flex flex-wrap items-center gap-3 text-[11px] w-full lg:w-auto">
+                    <div className="flex items-center gap-2 overflow-hidden bg-white/50 px-3 py-1.5 rounded-xl border border-slate-200/50">
+                      <span className="truncate text-slate-600 font-mono">{PERSONAL_INFO.email}</span>
+                      <button
+                        onClick={handleCopyEmail}
+                        className="text-[11px] text-brand-pink-dark hover:text-brand-pink-medium font-bold shrink-0 underline cursor-pointer"
+                      >
+                        {copiedEmail ? 'Copiado' : 'Copiar'}
+                      </button>
+                    </div>
+                    
+                    <a
+                      href={PERSONAL_INFO.socialLinks.whatsapp}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[11px] font-bold text-emerald-700 hover:text-emerald-800 cursor-pointer bg-emerald-50/70 hover:bg-emerald-100/75 px-3 py-1.5 rounded-xl border border-emerald-100/50 transition duration-200 shadow-sm shrink-0"
                     >
-                      {copiedEmail ? 'Copiado' : 'Copiar'}
-                    </button>
+                      <MessageCircle size={13} className="text-emerald-600 animate-pulse" />
+                      <span>WhatsApp: {PERSONAL_INFO.phone}</span>
+                    </a>
                   </div>
                 </div>
 
@@ -448,6 +481,15 @@ export default function App() {
               className="text-slate-400 hover:text-brand-dark transition text-[11px]"
             >
               GitHub
+            </a>
+            <span>•</span>
+            <a
+              href={PERSONAL_INFO.socialLinks.whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-400 hover:text-emerald-600 transition text-[11px]"
+            >
+              WhatsApp
             </a>
             <span>•</span>
             <button
